@@ -1,4 +1,4 @@
-# This implementation apply Gradient Boost Tree 
+# This implementation apply Gradient boost tree
 
 import pandas as pd
 import numpy as np
