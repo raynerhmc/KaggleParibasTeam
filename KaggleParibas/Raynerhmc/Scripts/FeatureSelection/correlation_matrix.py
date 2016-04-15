@@ -15,9 +15,9 @@ if __name__ == '__main__':
     # Generate a large random dataset
     print("Read the Data")
     #read the data train
-    train = pd.read_csv("../../../Input/simple_without_nulls_train.csv")
+    train = pd.read_csv("../../../Input/train.csv")
     #drop the unncessary columns
-    train = train.drop(['class'],axis=1)
+    train = train.drop(['ID', 'target'],axis=1)
 
 
     

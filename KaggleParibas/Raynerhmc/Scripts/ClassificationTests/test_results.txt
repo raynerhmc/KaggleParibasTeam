@@ -46,7 +46,14 @@ dropped: 'v46', 'v63', 'v17', 'v60', 'v48', 'v100', 'v115'
 9) Test1  --- depth 10 
 - With original training data
 dropped: 'v46', 'v63', 'v17', 'v60', 'v48', 'v100'
-[59]	train-logloss:0.371955	val-logloss:0.464784
+[59]	train-logloss:0.371955	val-logloss:0.464784   test_logloss: 0.46402
+
+
+10) Test1 ---- depth 10 
+- With jorge_train_001, jorge_test_001, it uses conversion de categorical variables to numerical variables using dummy coding. Also it fills nulls with moda and average.
+dropped: 'v46', 'v63', 'v17', 'v60', 'v48', 'v100'
+[125]	train-logloss:0.343087	val-logloss:0.464003   test_logloss: 0.46520
+
 
 ================================== 
 Ranking from best (left) to worst (right) 
