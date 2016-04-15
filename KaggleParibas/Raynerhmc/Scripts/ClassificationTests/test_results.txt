@@ -1,0 +1,57 @@
+1) Test1  --- depth 6
+- With original training data
+dropped: 
+[110]	train-logloss:0.448267	val-logloss:0.468070
+
+2) Test1  --- depth 6
+- With original training data
+dropped: 'v17', 'v29', 'v48', 'v61', 'v64', 'v65', 'v93', 'v100', 'v101', 'v106', 'v121'
+[120]	train-logloss:0.446407	val-logloss:0.467462  
+
+3) Test1  --- depth 6
+- With original training data
+dropped: 'v17', 'v29', 'v48', 'v61', 'v64', 'v65', 'v93', 'v100', 'v101', 'v106', 'v121', 'v59', 'v44', 'v130', 'v96', 'v76', 'v58'
+[138]	train-logloss:0.443338	val-logloss:0.467522
+
+4) Test1  --- depth 6
+- With original training data
+dropped: 'v17', 'v29', 'v48', 'v61', 'v64', 'v65', 'v93', 'v100', 'v101', 'v106', 'v121', 'v117', 'v97', 'v73', 'v123', 'v67', 'v36', 'v111', 'v77', 'v118', 'v51', 'v2',	'v41', 'v13', 'v4',	'v33', 'v59', 'v44', 'v130', 'v96', 'v76', 'v58'
+[116]	train-logloss:0.446943	val-logloss:0.467622
+
+5) Test1  --- depth 10
+- With original training data
+dropped: 
+[72]	train-logloss:0.357989	val-logloss:0.464954
+
+6) Test1  --- depth 10
+- With original training data
+dropped: 'v17', 'v29', 'v48', 'v61', 'v64', 'v65', 'v93', 'v100', 'v101', 'v106', 'v121'
+[66]	train-logloss:0.364476	val-logloss:0.465481
+
+7) Test2  --- depth 10
+- with training data without nulls from Tohalino
+dropped: 
+[73]	train-logloss:0.360624	val-logloss:0.465873
+
+8) Test1  --- depth 10 
+- With original training data
+dropped: 'v46', 'v63', 'v17'
+[80]	train-logloss:0.352497	val-logloss:0.464212
+
+9) Test1  --- depth 10 
+- With original training data
+dropped: 'v46', 'v63', 'v17', 'v60', 'v48', 'v100', 'v115'
+[67]	train-logloss:0.363951	val-logloss:0.464970
+
+9) Test1  --- depth 10 
+- With original training data
+dropped: 'v46', 'v63', 'v17', 'v60', 'v48', 'v100'
+[59]	train-logloss:0.371955	val-logloss:0.464784
+
+================================== 
+Ranking from best (left) to worst (right) 
+-- Program : ./mrmr -i to_feature_selection_train.csv -t 2 -n 131 -m MID -s 100000 -v 132
+'v50', 'v38', 'v129', 'v14', 'v85', 'v114', 'v75', 'v74', 'v125', 'v47', 'v71', 'v3', 'v18', 'v79', 'v30', 'v56', 'v24', 'v110', 'v91', 'v10', 'v107', 'v52', 'v22', 'v31', 'v112', 'v113', 'v66', 'v109', 'v62', 'v86', 'v5', 'v69', 'v72', 'v21', 'v19', 'v63', 'v120', 'v35', 'v37', 'v40', 'v78', 'v39', 'v126', 'v23', 'v82', 'v26', 'v102', 'v6', 'v70', 'v12', 'v36', 'v131', 'v99', 'v124', 'v95', 'v9', 'v34', 'v119', 'v88', 'v127', 'v53', 'v76', 'v20', 'v57', 'v16', 'v68', 'v89', 'v104', 'v2', 'v80', 'v90', 'v28', 'v108', 'v115', 'v92', 'v122', 'v54', 'v83', 'v103', 'v116', 'v8', 'v98', 'v128', 'v59', 'v118', 'v1', 'v32', 'v123', 'v81', 'v11', 'v27', 'v105', 'v94', 'v111', 'v13', 'v117', 'v42', 'v84', 'v7', 'v46', 'v15', 'v43', 'v65', 'v49', 'v58', 'v45', 'v97', 'v55', 'v87', 'v25', 'v130', 'v17', 'v77', 'v60', 'v61', 'v73', 'v121', 'v67', 'v100', 'v51', 'v41', 'v101', 'v33', 'v44', 'v96', 'v4', 'v29', 'v93', 'v64', 'v106', 'v48'
+
+-- Ranking correlation matrix
+'v46', 'v63', 'v17', 'v60', 'v48', 'v100', 'v115'

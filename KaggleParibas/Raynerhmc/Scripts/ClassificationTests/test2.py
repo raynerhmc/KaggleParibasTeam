@@ -14,10 +14,10 @@ print('Load data...')
 train = pd.read_csv("../../../Input/without_nulls_train.csv")
 target = train['target'].values
 print ('target shape: ', target.shape)
-train = train.drop(['ID','target', 'SEQ'],axis=1)
+train = train.drop(['SEQ','ID','target','v46', 'v63', 'v17'],axis=1)
 test = pd.read_csv("../../../Input/without_nulls_test.csv")
 id_test = test['ID'].values
-test = test.drop(['ID', 'SEQ'],axis=1)
+test = test.drop(['SEQ','ID','v46', 'v63', 'v17'],axis=1)
 
 nsamples = train.shape[0];
 print('nsamples: ' , nsamples )

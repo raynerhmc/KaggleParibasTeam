@@ -1,4 +1,8 @@
-# This implementation apply Gradient boost tree
+# Author: raynerhmc, modified version of kaggle user
+# This implementation apply Gradient boost tree classifier over data with not too much processing
+# All categorical data was converted to numerical through incremental numbers - 1 to 1 conversion.
+# Catagorical data with null values were converted to -1
+# Numerical data with null values were converted to -1001.
 
 import pandas as pd
 import numpy as np
@@ -16,10 +20,10 @@ print('Load data...')
 train = pd.read_csv("../../../Input/train.csv")
 target = train['target'].values
 print ('target shape: ', target.shape)
-train = train.drop(['ID','target'],axis=1)
+train = train.drop(['ID','target', 'v46', 'v63', 'v17', 'v60', 'v48', 'v100'],axis=1)
 test = pd.read_csv("../../../Input/test.csv")
 id_test = test['ID'].values
-test = test.drop(['ID'],axis=1)
+test = test.drop(['ID','v46', 'v63', 'v17', 'v60', 'v48', 'v100'],axis=1)
 
 nsamples = train.shape[0];
 print('nsamples: ' , nsamples )

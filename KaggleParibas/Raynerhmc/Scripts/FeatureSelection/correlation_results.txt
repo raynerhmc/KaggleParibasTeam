@@ -1,0 +1,67 @@
+correlation
+positive correlation between:  v8  and  v46  --> corr:  0.975191744621
+positive correlation between:  v8  and  v63  --> corr:  0.975973995809
+positive correlation between:  v11  and  v53  --> corr:  0.95575735934
+positive correlation between:  v17  and  v64  --> corr:  0.982626138377
+positive correlation between:  v17  and  v76  --> corr:  0.992671255121
+positive correlation between:  v25  and  v46  --> corr:  0.982215362503
+positive correlation between:  v25  and  v54  --> corr:  0.967925467976
+positive correlation between:  v25  and  v63  --> corr:  0.981040099154
+positive correlation between:  v25  and  v89  --> corr:  0.964605942353
+positive correlation between:  v25  and  v105  --> corr:  0.962163425686
+positive correlation between:  v26  and  v60  --> corr:  0.980747038548
+positive correlation between:  v29  and  v96  --> corr:  0.957028587828
+positive correlation between:  v33  and  v83  --> corr:  0.96430194387
+negative correlation between:  v40  and  v114  --> corr:  -0.966351177307
+positive correlation between:  v41  and  v96  --> corr:  0.950463470418
+positive correlation between:  v43  and  v116  --> corr:  0.977874253526
+positive correlation between:  v46  and  v63  --> corr:  0.991609285305
+negative correlation between:  v48  and  v64  --> corr:  -0.962521091305
+negative correlation between:  v48  and  v106  --> corr:  -0.980726290332
+positive correlation between:  v54  and  v89  --> corr:  0.956307034029
+negative correlation between:  v58  and  v100  --> corr:  -0.997665073936
+positive correlation between:  v64  and  v76  --> corr:  0.953863469733
+negative correlation between:  v69  and  v115  --> corr:  -0.993691049023
+positive correlation between:  v83  and  v121  --> corr:  0.965986533538
+positive correlation between:  v92  and  v95  --> corr:  0.977089072958
+positive correlation between:  v97  and  v118  --> corr:  0.962461031417
+positive correlation between:  v108  and  v128  --> corr:  0.957298947419
+
+v8  ->  ['v46', 'v63']
+v11  ->  ['v53']
+v17  ->  ['v64', 'v76']
+v25  ->  ['v46', 'v54', 'v63', 'v89', 'v105']
+v26  ->  ['v60']
+v29  ->  ['v96']
+v33  ->  ['v83']
+v40  ->  ['v114']
+v41  ->  ['v96']
+v43  ->  ['v116']
+v46  ->  ['v8', 'v25', 'v63']
+v48  ->  ['v64', 'v106']
+v53  ->  ['v11']
+v54  ->  ['v25', 'v89']
+v58  ->  ['v100']
+v60  ->  ['v26']
+v63  ->  ['v8', 'v25', 'v46']
+v64  ->  ['v17', 'v48', 'v76']
+v69  ->  ['v115']
+v76  ->  ['v17', 'v64']
+v83  ->  ['v33', 'v121']
+v89  ->  ['v25', 'v54']
+v92  ->  ['v95']
+v95  ->  ['v92']
+v96  ->  ['v29', 'v41']
+v97  ->  ['v118']
+v100  ->  ['v58']
+v105  ->  ['v25']
+v106  ->  ['v48']
+v108  ->  ['v128']
+v114  ->  ['v40']
+v115  ->  ['v69']
+v116  ->  ['v43']
+v118  ->  ['v97']
+v121  ->  ['v83']
+v128  ->  ['v108']
+
+Decision: Removing 'v46', 'v63', 'v17', 'v60', 'v48', 'v100', 'v115'

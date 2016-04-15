@@ -4,7 +4,7 @@ import csv
 import math 
 from sklearn import ensemble
 print('Load data...')
-train = pd.read_csv("../input/without_nulls_train.csv")
+train = pd.read_csv("../../../Input/train.csv")
 target = train['target'].values
 train = train.drop(['ID','target'],axis=1)
 
@@ -29,4 +29,4 @@ for (train_name, train_series) in train.iteritems():
         dic[train_name] = train[train_name]
 
 print('saving to file...')
-pd.DataFrame(dic).to_csv('train_filled_data.csv',index=False)
+pd.DataFrame(dic).to_csv('../../../Input/simple_without_nulls_train.csv',index=False)
