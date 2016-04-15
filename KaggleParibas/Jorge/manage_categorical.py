@@ -29,7 +29,7 @@ Para saber el porcentaje de frecuencia de cada uno de los niveles de cada variab
 La funcion devuelve un vector de diccionarios (cada diccionario por variable)
 Alternativamente, el vector es guardado en disco. 
 '''
-def statistics(fileInput, fileOutput):
+def statistics_v2(fileInput, fileOutput):
 	categorical = ['v3','v22','v24', 'v30', 'v31', 'v47', 'v52', 'v56', 'v66', 'v71', 'v74', 'v75', 'v79', 'v91', 'v107' , 'v110', 'v112', 'v113', 'v125']
 	size_data = 114321
 
@@ -116,14 +116,89 @@ def manage_data(fileInput, fileOutput):
 	oneHot.to_csv(fileOutput)
 	return oneHot
 
+
+def manage_train_test(inputTrain, outputTrain , inputTest, outputTest):
+	categorical = ['v3','v22','v24', 'v30', 'v31', 'v47', 'v52', 'v56', 'v66', 'v71', 'v74', 'v75', 'v79', 'v91', 'v107' , 'v110', 'v112', 'v113', 'v125']
+	threshold_values = [3, 0.085, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 2, 2, 0, 1.5, 0.5, 0.16]
+	dictionary = load_data_from_disk(fileDict)
+
+	
+	result = dict()	
+	for i in range(len(categorical)):
+		new = reduce_lavels(inputTrain, categorical[i], dictionary[i], threshold_values[i])
+		result[categorical[i]] = new		 
+
+	df = pd.read_csv(inputTrain)
+	remove = categorical
+	numerical = df.drop(remove,axis=1)
+	for i in numerical:
+		vector = []
+		column = df[i]
+		for j in column:
+			vector.append(j)
+		result[i] = vector
+
+
+	columns = [x for x in df] 
+	data = pd.DataFrame(result, columns=columns)
+	oneHot = pd.get_dummies(data)
+	oneHot.to_csv(outputTrain)
+	
+
+
+	
+
+	result = dict()	
+	for i in range(len(categorical)):
+		new = reduce_lavels(inputTest, categorical[i], dictionary[i], threshold_values[i])
+		result[categorical[i]] = new		 
+
+	df = pd.read_csv(inputTest)
+	remove = categorical
+	numerical = df.drop(remove,axis=1)
+
+	for i in numerical:
+		vector = []
+		column = df[i]
+		for j in column:
+			vector.append(j)
+		result[i] = vector
+
+	columns = [x for x in df] 
+	
+
+	
+	data = pd.DataFrame(result, columns=columns)
+	oneHot = pd.get_dummies(data)
+	oneHot.to_csv(outputTest)
+	
+	
+
+	
+
+
+
+
+
+
+
+	#return oneHot
+
+
 	
 
 if __name__ == '__main__':
 	
 	#statistics(muestra)
-	#statistics(data_train)
+	#statistics_v2("outputTrain.csv" , fileDict)
+	
+	#dicc = load_data_from_disk(fileDict)
+	#print dicc[0]
 
-	manage_data(data_train, "probaFinal.csv")
+
+	#manage_data(data_train, "probaFinal.csv")
+
+	manage_train_test("outputTrain.csv", "readyTrain.csv" , "outputTest.csv", "readyTest.csv")
 
 
 
