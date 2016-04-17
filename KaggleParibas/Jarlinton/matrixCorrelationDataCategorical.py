@@ -12,7 +12,7 @@ if __name__ == '__main__':
     # Generate a large random dataset
     print("Read the Data")
     #read the data train
-    train = pd.read_csv("train.csv")
+    train = pd.read_csv("../Input/train.csv")
     
     #drop the unncessary columns
     # V1, V2, V4 ATÉ 21,V23, V(25 ATÉ 29), V(32 ATÉ 46), V(48 ATÉ 51), V(53), V(54), V(55), V(57 ATÉ 65), V(67 ATÉ 70), V(72), V(73), V(76 ATÉ 78), V(80 ATÉ 90), V(92 ATÉ 106), V(108), V(109), V(111), V(114 ATÉ 124), V(126 ATÉ 131).
@@ -28,21 +28,21 @@ if __name__ == '__main__':
     cat_daf = pd.DataFrame(train)
     # values come back to the train
     train = cat_daf.T.to_dict().values()
-
+    print ( train);
     # print(cat_dict)
 
-    #corr = train.corr()
-    #print (corr)
+    corr = train.corr()
+    print (corr)
 
       
-    #mask = np.zeros_like(train, dtype=np.bool)
-    #mask[np.triu_indices_from(mask)] = True
-    f,ax = plt.subplots(figsize=(11, 9))
-    cmap = sns.diverging_palette(220, 10, as_cmap=True)
+    # #mask = np.zeros_like(train, dtype=np.bool)
+    # #mask[np.triu_indices_from(mask)] = True
+    # f,ax = plt.subplots(figsize=(11, 9))
+    # cmap = sns.diverging_palette(220, 10, as_cmap=True)
 
-    sns.heatmap(train,vmax=.2)
-    #sns.heatmap(train,mask=mask,cmap=cmap , vmax=.2)
-    plt.show()
+    # sns.heatmap(train,vmax=.2)
+    # #sns.heatmap(train,mask=mask,cmap=cmap , vmax=.2)
+    # plt.show()
     
     
     '''
