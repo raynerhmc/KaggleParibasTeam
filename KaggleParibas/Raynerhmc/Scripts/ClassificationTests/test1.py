@@ -17,11 +17,11 @@ from sklearn import metrics
 import xgboost as xgb
 
 print('Load data...')
-train = pd.read_csv("../../../Input/jorge_train_001.csv")
+train = pd.read_csv("../../../Input/combined_features_train2.csv")
 target = train['target'].values
 print ('target shape: ', target.shape)
 train = train.drop(['ID','target'],axis=1)
-test = pd.read_csv("../../../Input/jorge_test_001.csv")
+test = pd.read_csv("../../../Input/combined_features_test2.csv")
 id_test = test['ID'].values
 test = test.drop(['ID'],axis=1)
 
