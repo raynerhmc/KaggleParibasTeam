@@ -37,22 +37,15 @@ var_num = ["v1","v2","v4","v5","v6","v7","v8","v9",
   "v123","v124","v126","v127"  
   "v128","v129","v130","v131"] 
 '''
-print('Filling NA variables')
+print('Filling NA variables and handle categorical variables')
 '''
 option: dummy, mean, data = default [-999 numerical values and factorize categorical values]
 '''
-#kaggle.fill_data('mean')
-kaggle.drop_correlated()
-
-print('Handle null value')
-
-print('getting the variable correlated')
-
-print('converting the categorical data to the numerical data')
+kaggle.fill_data()
 
 print('dimensional reduction')
-print('-- PCA variables')
-  
-print('-- kernel PCA variables')
-print('--  LDA variables')
-
+#kaggle.get_pca()
+kaggle.fecture_selection('l1')
+#kaggle.get_kpca()
+print('Classifying data for')
+#kaggle.classify('xgb')
